@@ -1,0 +1,11 @@
+<h1>All the Animals</h1>
+
+<a href="/pass_spca/new">Add A Animal</a>
+
+<ul>
+<% @animals.each do |m| %>
+  <li>
+    <a href="/pass_spca/<%= m.id %>"> <%= m.breed %> </a>
+  </li>
+<% end %>
+</ul>

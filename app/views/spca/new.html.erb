@@ -1,0 +1,23 @@
+<h1>Add a Movie to the Jukebox</h1>
+
+<!-- Rails form helper -->
+<!-- By default, the form will POST to a route matching the plural lowercase of the model name. -->
+<!-- Inspect Element in Chrome to see where the form is posting -->
+<!-- This form will post to '/movies' -->
+<%= form_for @animal do |f| %>
+
+  Title
+  <%= f.text_field :breed %><br>
+
+  Year
+  <%= f.text_field :color %><br>
+
+  Director
+  <%= f.text_field :size %><br>
+
+  Starring
+  <%= f.text_field :age %><br>
+
+
+  <%= f.submit "Add Movie" %>
+<% end %>

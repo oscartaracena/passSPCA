@@ -1,0 +1,11 @@
+<h1>All of the Movies</h1>
+
+<a href="/spca/new">Add A Movie</a>
+
+<ul>
+<% @animals.each do |m| %>
+  <li>
+    <a href="/SPCA/<%= m.id %>"> <%= m.breed %> </a>
+  </li>
+<% end %>
+</ul>

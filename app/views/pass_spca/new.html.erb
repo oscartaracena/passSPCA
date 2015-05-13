@@ -1,0 +1,21 @@
+<h1>Add a animal:</h1>
+
+
+<%= form_tag @animal do |f| %>
+
+  Breed
+  <%= f.text_field :breed%><br>
+
+  Color
+  <%= f.text_field :color %><br>
+
+  Size
+  <%= f.text_field :size %><br>
+
+  Age
+  <%= f.text_field :age %><br>
+
+
+
+  <%= f.submit "Add Animal" %>
+<% end %>
