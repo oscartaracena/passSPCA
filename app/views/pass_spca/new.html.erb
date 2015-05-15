@@ -1,21 +1,12 @@
 <h1>Add a animal:</h1>
 
 
-<%= form_tag @animal do |f| %>
+<%= form_tag("/pass_spca/create", method: "post") do %>
+<%= label_tag(:q, "Please Enter The Following: Breed, color, size,age") %><br>
+      Enter Breed: <%= text_field_tag(:breed) %><br>
+      Enter Color: <%= text_field_tag(:color) %><br>
+      Enter Size:  <%= text_field_tag(:color) %><br>
+      Enter Age:    <%= text_field_tag(:color) %><br>
 
-  Breed
-  <%= f.text_field :breed%><br>
-
-  Color
-  <%= f.text_field :color %><br>
-
-  Size
-  <%= f.text_field :size %><br>
-
-  Age
-  <%= f.text_field :age %><br>
-
-
-
-  <%= f.submit "Add Animal" %>
-<% end %>
+      <%= submit_tag("Submit") %>
+    <% end %>

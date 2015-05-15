@@ -15,7 +15,7 @@ class PassSpcaController < ApplicationController
     def create
       @animal = Animal.new(animal_params)
           if @animal.save
-            redirect_to @animal
+            redirect_to '/pass_spca/'
 
           else
             render :new
