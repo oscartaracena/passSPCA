@@ -23,8 +23,8 @@ class PassSpcaController < ApplicationController
     end
 
 
-    #private
-    #  def animal_params
-    #    params.require(:Dogcat).permit(:breed, :color, :size, :age)
-    #  end
+    private
+      def animal_params
+       params.require(:Dogcat).permit(:breed, :color, :size, :age)
+      end
 end
