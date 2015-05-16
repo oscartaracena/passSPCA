@@ -1,19 +1,19 @@
 class PassSpcaController < ApplicationController
 
     def index
-      @animals = Animal.all
+      @animals = Dogcat.all
     end
 
     def show
-      @animal = Animal.find(params['id'])
+      @animal = Dogcat.find(params['id'])
     end
 
     def new
-      @animal = Animal.new
+      @animal = Dogcat.new
     end
 
     def create
-      @animal = Animal.new(animal_params)
+      @animal = Dogcat.new#(animal_params)
           if @animal.save
             redirect_to '/pass_spca/'
 
@@ -23,8 +23,8 @@ class PassSpcaController < ApplicationController
     end
 
 
-    private
-      def animal_params
-        params.require(:animal).permit(:breed, :color, :size, :age)
-      end
+    #private
+    #  def animal_params
+    #    params.require(:Dogcat).permit(:breed, :color, :size, :age)
+    #  end
 end
